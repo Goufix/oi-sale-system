@@ -3,6 +3,9 @@
   "version": "1.0.0-alpha.1",
   "private": true,
   "scripts": {
+    "lint": "yarn lint:raw .",
+    "lint:fix": "yarn lint:raw --fix .",
+    "lint:raw": "eslint --ext .js,.jsx,.ts,.tsx --max-warnings=0",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
