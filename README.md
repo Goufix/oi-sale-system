@@ -3,4 +3,3 @@
 Desenvolvido por:
 
 - Álifer.
-# oi-sale-system
