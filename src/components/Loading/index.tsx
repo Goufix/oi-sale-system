@@ -1,17 +1,17 @@
-import React from "react";
-import { Spinner, LoadingAlert } from "./styles";
-import { AlertProps } from "react-bootstrap";
+import React from 'react';
+import { AlertProps } from 'react-bootstrap';
+import { Spinner, LoadingAlert } from './styles';
 
 interface Props {
-  variant?: AlertProps["variant"];
+  variant?: AlertProps['variant'];
   message?: string;
 }
 
 export function Loading(props: Props) {
   return (
-    <LoadingAlert variant={props.variant || "info"}>
+    <LoadingAlert variant={props.variant || 'info'}>
       <Spinner />
-      {props.message || "Carregando..."}
+      {props.message || 'Carregando...'}
     </LoadingAlert>
   );
 }

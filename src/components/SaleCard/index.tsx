@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Card, Button } from "react-bootstrap";
-import { INVALID_SALE_LIST } from "../../data/invalidSaleList";
-import { beautifyName } from "../../utils/beautifyName";
-import { CardModal } from "./CardModal";
-import * as S from "./styles";
-import { SheetRow } from "../../@types/sheet";
+import React, { useState } from 'react';
+import { Card, Button } from 'react-bootstrap';
+import { SheetRow } from '../../@types/sheet';
+import { INVALID_SALE_LIST } from '../../data/invalidSaleList';
+import { beautifyName } from '../../utils/beautifyName';
+import { CardModal } from './CardModal';
+import * as S from './styles';
 
 interface Props {
   seller: string;
@@ -15,7 +15,7 @@ export function SaleCard(props: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const goal = props.sales.filter(
-    sale => !INVALID_SALE_LIST.includes(sale.COMBO)
+    (sale) => !INVALID_SALE_LIST.includes(sale.COMBO)
   );
   const seller = beautifyName(props.seller);
 

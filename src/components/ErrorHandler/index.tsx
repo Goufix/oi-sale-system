@@ -1,6 +1,6 @@
-import React from "react";
-import { Alert } from "react-bootstrap";
-import styled from "styled-components";
+import React from 'react';
+import { Alert } from 'react-bootstrap';
+import styled from 'styled-components';
 
 const ErrorMessage = styled.pre`
   border: solid 1px #491217;
@@ -14,7 +14,7 @@ const ErrorMessage = styled.pre`
 export class ErrorHandler extends React.Component {
   state = {
     hasError: false,
-    message: ""
+    message: ''
   };
 
   static getDerivedStateFromError(error: Error) {
@@ -33,7 +33,7 @@ export class ErrorHandler extends React.Component {
           <p>
             Algum erro aconteceu ao tentar renderizar essa página.
             <br />
-            Tente{" "}
+            Tente{' '}
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid, no-script-url */}
             <Alert.Link href="javascript:window.location.reload(true);">
               atualizar a página

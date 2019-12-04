@@ -1,10 +1,10 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
-import { SALE_LIST } from "../../data/saleList";
-import { useTableTop } from "../../hooks/useTableTop";
-import { Loading } from "../Loading";
-import { SaleCard } from "../SaleCard";
-import { SheetRow } from "../../@types/sheet";
+import React from 'react';
+import { Col, Row } from 'react-bootstrap';
+import { SheetRow } from '../../@types/sheet';
+import { SALE_LIST } from '../../data/saleList';
+import { useTableTop } from '../../hooks/useTableTop';
+import { Loading } from '../Loading';
+import { SaleCard } from '../SaleCard';
 
 const key: string = process.env.REACT_APP_SHEET_KEY!;
 
@@ -24,7 +24,7 @@ export function Home() {
     );
   }
 
-  const sellers = [...new Set(sheetData.map(value => value.VENDEDOR))];
+  const sellers = [...new Set(sheetData.map((value) => value.VENDEDOR))];
 
   return (
     <Row>
@@ -34,7 +34,7 @@ export function Home() {
             <SaleCard
               key={i}
               seller={seller}
-              sales={sheetData.filter(sale => sale.VENDEDOR === seller)}
+              sales={sheetData.filter((sale) => sale.VENDEDOR === seller)}
             />
           </Col>
         ))}
