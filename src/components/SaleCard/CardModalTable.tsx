@@ -1,6 +1,6 @@
-import React from "react";
-import { Table } from "react-bootstrap";
-import { SheetRow } from "../../@types/sheet";
+import React from 'react';
+import { Table } from 'react-bootstrap';
+import { SheetRow } from '../../@types/sheet';
 
 interface Props {
   sells: SheetRow[];

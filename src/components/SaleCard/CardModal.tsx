@@ -1,8 +1,8 @@
-import React from "react";
-import { Modal, Button, Card, Accordion } from "react-bootstrap";
-import { SheetRow } from "../../@types/sheet";
-import { CardModalTable } from "./CardModalTable";
-import * as S from "./styles";
+import React from 'react';
+import { Modal, Button, Card, Accordion } from 'react-bootstrap';
+import { SheetRow } from '../../@types/sheet';
+import { CardModalTable } from './CardModalTable';
+import * as S from './styles';
 
 interface Props {
   isOpen: boolean;
@@ -13,8 +13,8 @@ interface Props {
 }
 
 enum Sells {
-  ALL_SELLS = "ALL_SELLS",
-  GOAL_SELLS = "GOAL_SELLS"
+  ALL_SELLS = 'ALL_SELLS',
+  GOAL_SELLS = 'GOAL_SELLS'
 }
 
 export function CardModal(props: Props) {
