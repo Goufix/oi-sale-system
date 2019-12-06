@@ -1,5 +1,6 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link } from "@reach/router";
 
 export function NavigationBar() {
   return (
@@ -9,8 +10,12 @@ export function NavigationBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#--">Home</Nav.Link>
-            <Nav.Link href="#--">Gráficos de Desempenho</Nav.Link>
+            <Link to="/">
+              <Nav.Link>Home</Nav.Link>
+            </Link>
+            <Link to="/challenges/decemberChallenge">
+              <Nav.Link>Gráficos de Desempenho</Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

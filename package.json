@@ -12,7 +12,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "@types/node": "^12.12.14",
+    "@types/reach__router": "^1.2.6",
     "@types/react": "^16.9.14",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.0",

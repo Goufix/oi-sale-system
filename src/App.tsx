@@ -1,9 +1,11 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import { ErrorHandler } from './components/ErrorHandler';
-import { Home } from './components/Home';
-import { NavigationBar } from './components/NavigationBar';
-import { GlobalStyle } from './styles/global';
+import React from "react";
+import { Router } from "@reach/router";
+import { Container } from "react-bootstrap";
+import { ErrorHandler } from "./components/ErrorHandler";
+import { Home } from "./components/Home";
+import { NavigationBar } from "./components/NavigationBar";
+import { GlobalStyle } from "./styles/global";
+import { DecemberChallenge } from "./components/DecemberChallenge";
 
 export function App() {
   return (
@@ -11,7 +13,10 @@ export function App() {
       <GlobalStyle />
       <NavigationBar />
       <Container>
-        <Home />
+        <Router>
+          <Home path="/" />
+          <DecemberChallenge path="/challenges/decemberChallenge" />
+        </Router>
       </Container>
     </ErrorHandler>
   );
