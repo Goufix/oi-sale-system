@@ -15,7 +15,10 @@ export function App() {
       <Container>
         <Router>
           <Home path="/" />
-          <DecemberChallenge path="/challenges/decemberChallenge" />
+          <DecemberChallenge
+            path="/challenges/decemberChallenge"
+            seller={"Alifer"}
+          />
         </Router>
       </Container>
     </ErrorHandler>

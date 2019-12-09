@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
-import { SheetRow } from '../../@types/sheet';
-import { INVALID_SALE_LIST } from '../../data/invalidSaleList';
-import { beautifyName } from '../../utils/beautifyName';
-import { CardModal } from './CardModal';
-import * as S from './styles';
+import React, { useState } from "react";
+import { Card, Button } from "react-bootstrap";
+import { SheetRow } from "../../@types/sheet";
+import { INVALID_SALE_LIST } from "../../data/invalidSaleList";
+import { beautifyName } from "../../utils/beautifyName";
+import { CardModal } from "./CardModal";
+import * as S from "./styles";
 
 interface Props {
   seller: string;
@@ -15,7 +15,7 @@ export function SaleCard(props: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const goal = props.sales.filter(
-    (sale) => !INVALID_SALE_LIST.includes(sale.COMBO)
+    sale => !INVALID_SALE_LIST.includes(sale.COMBO)
   );
   const seller = beautifyName(props.seller);
 
@@ -40,7 +40,36 @@ export function SaleCard(props: Props) {
       </S.Header>
       <Card.Body>
         <div>Vendeu: {props.sales.length}</div>
-        <div>Meta: {goal.length}</div>
+        <div>Meta: 25 Pós / 10 Fibras</div>
+        <div>
+          Meta atingida pós:{" "}
+          {goal
+            .filter(
+              v =>
+                v.PRODUTO_VENDIDO.includes("PÓS") ||
+                v.PRODUTO_VENDIDO.includes("DEPENDENTE") ||
+                v.PRODUTO_VENDIDO.includes("DEPENDENTES")
+            )
+            .reduce((pv, value) => {
+              let accumulator = pv;
+              if (value.PRODUTO_VENDIDO.includes("PÓS")) {
+                accumulator++;
+              }
+              if (value.PRODUTO_VENDIDO.includes("DEPENDENTE")) {
+                accumulator++;
+              }
+              if (value.PRODUTO_VENDIDO.includes("2 DEPENDENTES")) {
+                accumulator += 2;
+              }
+              if (value.PRODUTO_VENDIDO.includes("3 DEPENDENTES")) {
+                accumulator += 3;
+              }
+              if (value.PRODUTO_VENDIDO.includes("4 DEPENDENTES")) {
+                accumulator += 4;
+              }
+              return accumulator;
+            }, -1)}
+        </div>
       </Card.Body>
     </Card>
   );

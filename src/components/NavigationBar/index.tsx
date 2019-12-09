@@ -10,12 +10,12 @@ export function NavigationBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Link to="/">
-              <Nav.Link>Home</Nav.Link>
-            </Link>
-            <Link to="/challenges/decemberChallenge">
-              <Nav.Link>Gráficos de Desempenho</Nav.Link>
-            </Link>
+            <Nav.Link to="/" as={Link}>
+              Home
+            </Nav.Link>
+            <Nav.Link to="/challenges/decemberChallenge" as={Link}>
+              Desafio
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

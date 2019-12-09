@@ -7,7 +7,7 @@ import { Loading } from "../Loading";
 import { SaleCard } from "../SaleCard";
 import { RouteComponentProps } from "@reach/router";
 
-const key: string = process.env.REACT_APP_SHEET_KEY!;
+const key = "178R4sLiU9oqHCy5E6_rtfhoMBvXhTrIAKfpEOTtdqXU";
 
 export function Home(_: RouteComponentProps) {
   const sheetData = useTableTop<SheetRow>(key);
@@ -29,16 +29,15 @@ export function Home(_: RouteComponentProps) {
 
   return (
     <Row>
-      {sellers &&
-        sellers.map((seller, i) => (
-          <Col key={i}>
-            <SaleCard
-              key={i}
-              seller={seller}
-              sales={sheetData.filter(sale => sale.VENDEDOR === seller)}
-            />
-          </Col>
-        ))}
+      {sellers.map((seller, i) => (
+        <Col key={i}>
+          <SaleCard
+            key={i}
+            seller={seller}
+            sales={sheetData.filter(sale => sale.VENDEDOR === seller)}
+          />
+        </Col>
+      ))}
     </Row>
   );
 }
