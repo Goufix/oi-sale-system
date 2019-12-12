@@ -69,7 +69,8 @@ export function SaleCard(props: Props) {
               }
               return accumulator;
             }, -1)}
-        </div>
+	</div>
+	<div>Meta fibra: {goal.filter(value => value.COMBO.includes("FIBRA")).length}
       </Card.Body>
     </Card>
   );
