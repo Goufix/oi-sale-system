@@ -70,7 +70,7 @@ export function SaleCard(props: Props) {
               return accumulator;
             }, -1)}
 	</div>
-	<div>Meta fibra: {goal.filter(value => value.COMBO.includes("FIBRA")).length}</div>
+	<div>Meta fibra: {goal.filter(value => value.PRODUTO_VENDIDO.includes("FIBRA")).length}</div>
       </Card.Body>
     </Card>
   );
