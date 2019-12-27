@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { SheetRow } from "../../@types/sheet";
 import { INVALID_SALE_LIST } from "../../data/invalidSaleList";
@@ -70,7 +70,7 @@ export function SaleCard(props: Props) {
               return accumulator;
             }, -1)}
 	</div>
-	<div>Meta fibra: {goal.filter(value => value.PRODUTO_VENDIDO.includes("FIBRA")).length}</div>
+	<div>Meta fibra: {goal.filter(value => value.PRODUTO_VENDIDO.includes("FIBRA") || value.PRODUTO_VENDIDO.includes("MIGRAÇÃO COBRE > FIBRA")).length}</div>
       </Card.Body>
     </Card>
   );
