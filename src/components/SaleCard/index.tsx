@@ -39,8 +39,7 @@ export function SaleCard(props: Props) {
         </Button>
       </S.Header>
       <Card.Body>
-        <div>Vendeu: {props.sales.length}</div>
-        <div>Meta: 25 Pós / 10 Fibras</div>
+        <div>Vendeu: {goal.length}</div>
         <div>
           Meta atingida pós:{" "}
           {goal
