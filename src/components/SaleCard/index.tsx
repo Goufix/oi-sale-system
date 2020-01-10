@@ -68,7 +68,7 @@ export function SaleCard(props: Props) {
                 accumulator += 4;
               }
               return accumulator;
-            }, -1)}
+            }, 0)}
 	</div>
 	<div>Meta fibra: {goal.filter(value => value.PRODUTO_VENDIDO.includes("FIBRA") || value.PRODUTO_VENDIDO.includes("MIGRAÇÃO COBRE > FIBRA")).length}</div>
       </Card.Body>
