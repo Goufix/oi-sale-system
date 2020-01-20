@@ -1,6 +1,6 @@
-# 🏬 Repos Fetcher
+# 🏬 Oi Sale System
 
-Fetch the repositories for a given user.
+Shows informations about the sales made by _Oi_ salespeople and another util informations
 
 ## 📖 Other Information
 
