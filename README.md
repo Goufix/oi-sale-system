@@ -1,5 +1,7 @@
-# Oi Sale System
+# 🏬 Repos Fetcher
 
-Desenvolvido por:
+Fetch the repositories for a given user.
 
-- Álifer.
+## 📖 Other Information
+
+Created by [Álifer de Medeiros Quevedo](https://github.com/Goufix).
